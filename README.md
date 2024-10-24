@@ -26,3 +26,54 @@ cd sqlite-capacitor-ionic-skeleton
 npm install
 ```
 
+## Agregar plataformas
+Para ejecutar la aplicación en dispositivos físicos o emuladores, es necesario agregar las plataformas correspondientes. Aquí te mostramos cómo hacerlo.
+
+### Android
+Agrega la plataforma Android al proyecto con los siguientes comandos:
+
+```bash
+npx cap add android
+
+npx cap open android
+```
+Esto abrirá el proyecto en Android Studio, donde podrás emular la aplicación o desplegarla en un dispositivo físico.
+
+### iOS
+Para iOS, usa los siguientes comandos:
+
+```bash
+npx cap add ios
+
+npx cap open ios
+```
+
+Esto abrirá el proyecto en Xcode, donde podrás ejecutar la aplicación en un simulador de iOS o un dispositivo físico.
+
+## Construye el proyecto
+Para compilar generar el folder .www y preparar el proyecto para su ejecución en dispositivos o entornos de producción, sigue estos pasos:
+
+
+```bash
+ng build
+npx cap sync
+```
+
+
+## Ejecución en dispositivos o emuladores
+Una vez que hayas agregado las plataformas, puedes compilar y desplegar la aplicación en un dispositivo o emulador.
+
+### Android
+Para compilar y ejecutar la aplicación en Android:
+
+```bash
+ionic capacitor run android -l --external
+```
+Este comando compilará la aplicación, abrirá el emulador o tu dispositivo conectado, y permitirá recargar automáticamente la aplicación cada vez que realices un cambio en el código.
+
+### iOS
+Para iOS, utiliza el siguiente comando:
+
+```bash
+ionic capacitor run ios --l
+```
