@@ -5,6 +5,7 @@ import sqliteParams from "../databases/sqliteParams";
 import authorDataSource from "../databases/datasources/AuthorDataSource";
 import "reflect-metadata"
 import {SqliteQueryService} from "./services/sqlite-query.service";
+import {Author} from "../databases/entities";
 
 @Component({
   selector: 'app-root',
@@ -16,9 +17,19 @@ export class AppComponent {
 
   async ngOnInit() {
     await this.initializeDataSources()
-    await this.sqlite.initTables()
-    // await this.sqlite.getAuthor()
+    // await this.sqlite.initTables()
     await this.sqlite.getAuthor()
+
+    const newAuthor = new Author()
+    newAuthor.email = 'deivod_halo@gmail.com'
+    newAuthor.name = 'David San Luis'
+    newAuthor.birthday = '13/10/1998'
+
+    await this.sqlite.checkDatabaseExists()
+
+    // await this.sqlite.addAuthor(newAuthor)
+    // await this.sqlite.getAuthor()
+
   }
 
    initializeDataSources = async () => {
@@ -30,7 +41,6 @@ export class AppComponent {
         console.log(e);
         return {};
       });
-
     // Loop through the DataSources
     for (const mDataSource of [authorDataSource]) {
       // initialize

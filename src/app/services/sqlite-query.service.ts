@@ -39,7 +39,8 @@ export class SqliteQueryService {
       const author = await mDataSource.dataSource
         .query(createTablesSQL)
       console.log("author: ", author)
-    }  }
+    }
+  }
   async getAuthor() {
     for (const mDataSource of [authorDataSource]) {
       // const author = await mDataSource.dataSource.manager.find(Author)
@@ -48,4 +49,38 @@ export class SqliteQueryService {
     }
 
   }
+
+  async addAuthor(author: Partial<Author>){
+    try {
+      const authorRepository = authorDataSource.dataSource.getRepository(Author)
+      console.log("author to create: ", author)
+      await authorRepository.save(author)
+      console.log("Author has been added:", author);
+
+    }catch (e) {
+      console.error("error adding author:", e)
+    }
+  }
+
+
+  async checkDatabaseExists(): Promise<boolean> {
+    try {
+      const result = await sqliteParams.connection.isDatabase(authorDataSource.dbName);
+      console.log("database exist: ", result.result)
+      return result.result ?? false;
+    } catch (error) {
+      console.error('Failed to check if database exists:', error);
+      return false;
+    }
+  }
+
+  async  deleteDatabase(): Promise<void> {
+    try {
+      // await sqliteParams.connection.de.deleteDatabase(databaseName);
+      // console.log(`Database ${databaseName} deleted successfully.`);
+    } catch (error) {
+      console.error('Failed to delete database:', error);
+    }
+  }
+
 }

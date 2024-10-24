@@ -1,6 +1,4 @@
--- Script SQL para crear las tablas de las entidades Author, Post y Category
 
--- Tabla 'author'
 CREATE TABLE IF NOT EXISTS author (
                                   id INTEGER PRIMARY KEY AUTOINCREMENT,
                                   name TEXT NOT NULL,
@@ -18,4 +16,4 @@ CREATE TABLE IF NOT EXISTS post (
 
 CREATE TABLE IF NOT EXISTS category (
                                       id INTEGER PRIMARY KEY AUTOINCREMENT,
-                                      name TEXT UNIQUE NOT NULL
+                                      name TEXT UNIQUE NOT NULL)
