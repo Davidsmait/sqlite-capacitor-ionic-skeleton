@@ -3,7 +3,7 @@
 ![Logo](https://i.ytimg.com/vi/1HQEzdssoCQ/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGCEgQCh_MA8=&rs=AOn4CLBYTHvKU3WEYism-UvEIL5rcPEGoQ)
 
 ## Descripción
-Este proyecto es un esqueleto básico para crear aplicaciones móviles con [Ionic](https://ionicframework.com/) que implementan [SQLite](https://www.sqlite.org/) como base de datos local. Es ideal para aquellos que necesiten almacenar datos de manera eficiente en dispositivos móviles, incluso sin conexión a internet.
+Este proyecto es un esqueleto básico para crear aplicaciones móviles con [Ionic](https://ionicframework.com/) que implementan [SQLite](https://www.sqlite.org/) como base de datos local, y utiliza [TypeORM](https://typeorm.io/) para la gestión de entidades y operaciones de base de datos. Es ideal para aquellos que necesiten almacenar y manipular datos de manera eficiente en dispositivos móviles, incluso sin conexión a internet.
 
 ## Uso como Template
 Si deseas crear un nuevo repositorio utilizando este proyecto como base, haz clic en el botón "Use this template" en la parte superior derecha de este repositorio para generar tu propio repositorio a partir de él.
