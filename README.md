@@ -8,6 +8,12 @@ Este proyecto es un esqueleto básico para crear aplicaciones móviles con [Ioni
 ## Uso como Template
 Si deseas crear un nuevo repositorio utilizando este proyecto como base, haz clic en el botón "Use this template" en la parte superior derecha de este repositorio para generar tu propio repositorio a partir de él.
 
+## Tutorial
+
+He escrito un tutorial detallado explicando cómo usar este proyecto paso a paso. Puedes leerlo aquí:  
+📖 [Leer el tutorial](https://davidsanluisaguirre.com/posts/ionic-sqlite/)
+
+
 ## Requisitos Previos
 
 Antes de iniciar, asegúrate de tener instalados los siguientes requisitos:
