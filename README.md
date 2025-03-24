@@ -20,7 +20,7 @@ Antes de iniciar, asegúrate de tener instalados los siguientes requisitos:
 
 - [Node.js](https://nodejs.org/)
 - [Ionic CLI](https://ionicframework.com/docs/cli) 
-- [Cordova](https://cordova.apache.org/) o [Capacitor](https://capacitorjs.com/) para acceder a las capacidades nativas del dispositivo
+- [Capacitor](https://capacitorjs.com/) para acceder a las capacidades nativas del dispositivo
 
 ## Instalación
 
